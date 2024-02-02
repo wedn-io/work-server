@@ -19,7 +19,7 @@
 	# 작업 페이지 경로
 	function DEV_PATH($REQUEST_INFO){
 		$RESPONSE_INFO = "/".$REQUEST_INFO;
-		return "현재 페이지 >>> ". $RESPONSE_INFO;
+		return "Directory ". $RESPONSE_INFO;
 	}
 
 	# 작업 서버 정보
