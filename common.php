@@ -25,10 +25,10 @@
 	# 작업 서버 정보
 	function DEV_INFO(){
 		$SERVER_INFO = "<br><br>";
-		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE'];
-		$SERVER_INFO .= $_SERVER['SERVER_NAME'];
-		$SERVER_INFO .= $_SERVER['SERVER_ADDR'];
-		$SERVER_INFO .= $_SERVER['SERVER_PORT'];
+		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']."<br>";
+		$SERVER_INFO .= $_SERVER['SERVER_NAME']."<br>";
+		$SERVER_INFO .= $_SERVER['SERVER_ADDR']."<br>";
+		$SERVER_INFO .= $_SERVER['SERVER_PORT']."<br>";
 		return $SERVER_INFO;
 	}
 
