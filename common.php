@@ -22,6 +22,15 @@
 		return "현재 페이지 >>> ". $RESPONSE_INFO;
 	}
 
+	# 작업 서버 정보
+	function DEV_INFO(){
+		$SERVER_INFO = "<br><br>";
+		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE'];
+		$SERVER_INFO .= $_SERVER['SERVER_NAME'];
+		$SERVER_INFO .= $_SERVER['SERVER_ADDR'];
+		$SERVER_INFO .= $_SERVER['SERVER_PORT'];
+		return $SERVER_INFO;
+	}
 
 
 	# 작업 페이지 파라미터
