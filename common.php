@@ -27,7 +27,7 @@
 		$SERVER_INFO = "<br><br>";
 		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']." ";
 		$SERVER_INFO .= $_SERVER['SERVER_NAME'];
-		return $SERVER_INFO;
+		return "Server info ".$SERVER_INFO;
 	}
 
 
