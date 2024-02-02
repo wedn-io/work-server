@@ -66,10 +66,10 @@
 		'211.184.136.132'
 	];
 
-	$DEV_IP = 0;
+	$_DEV = 0;
 
 	if(in_array($_SERVER['REMOTE_ADDR'], $ALLOW_IP)){
-		$DEV_IP = 1;
+		$_DEV = 1;
 	}
 	/* */
 
