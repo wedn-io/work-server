@@ -25,8 +25,8 @@
 	# 작업 서버 정보
 	function DEV_INFO(){
 		$SERVER_INFO = "<br><br>";
-		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']."<br>";
-		$SERVER_INFO .= $_SERVER['SERVER_NAME']."<br>";
+		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']." ";
+		$SERVER_INFO .= $_SERVER['SERVER_NAME'];
 		return $SERVER_INFO;
 	}
 
