@@ -1,0 +1,13 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	min-width:325px; 
+	padding: 5px;
+}
+
+/* 작업 중 적용 */
+.dev-info { width:100%; background:#eee; padding:20px; border:2px solid #ccc; margin-top:50px; }

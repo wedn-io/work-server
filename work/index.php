@@ -1,0 +1,6 @@
+<?
+	/*
+		work page
+	*/
+	echo "work";
+?>
