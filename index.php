@@ -1,4 +1,4 @@
-<?
+<?php
 	include "./common.php";
 
 	$INCLUDE_HEAD = LAYOUT_PATH($LAYOUT_INCLUDE_DIR, $HEAD_PATH);
