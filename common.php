@@ -22,6 +22,8 @@
 		return "현재 페이지 >>> ". $RESPONSE_INFO;
 	}
 
+
+
 	# 작업 페이지 파라미터
 	function DEV_PARAMETER($POST_PARAM, $GET_PARAM){
 		$RESPONSE_INFO = "";
