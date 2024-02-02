@@ -19,15 +19,14 @@
 	# 작업 페이지 경로
 	function DEV_PATH($REQUEST_INFO){
 		$RESPONSE_INFO = "/".$REQUEST_INFO;
-		return "Directory ". $RESPONSE_INFO;
+		return "Directory ". $RESPONSE_INFO."<br>";
 	}
 
 	# 작업 서버 정보
 	function DEV_INFO(){
-		$SERVER_INFO = "<br><br>";
-		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']." ";
+		$SERVER_INFO = $_SERVER['SERVER_SOFTWARE']." ";
 		$SERVER_INFO .= $_SERVER['SERVER_NAME'];
-		return "Server info ".$SERVER_INFO;
+		return "Server info ".$SERVER_INFO."<br>";
 	}
 
 
