@@ -26,9 +26,9 @@
 	function DEV_INFO(){
 		$SERVER_INFO = "<br><br>";
 		$SERVER_INFO .= $_SERVER['SERVER_SOFTWARE']."<br>";
-		$SERVER_INFO .= $_SERVER['SERVER_NAME']."<br>";
-		$SERVER_INFO .= $_SERVER['SERVER_ADDR']."<br>";
-		$SERVER_INFO .= $_SERVER['SERVER_PORT']."<br>";
+		$SERVER_INFO .= "[SERVER NAME] ".$_SERVER['SERVER_NAME']."<br>";
+		$SERVER_INFO .= "[SERVER ADDR] ".$_SERVER['SERVER_ADDR']."<br>";
+		$SERVER_INFO .= "[SERVER PORT] ".$_SERVER['SERVER_PORT']."<br>";
 		return $SERVER_INFO;
 	}
 
