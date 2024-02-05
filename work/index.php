@@ -11,6 +11,7 @@
 
 <script>
 	function todolist_registration(){
+		alert("@@");
 		let todo_contents = document.getElementsByName("todo-contents");
 		console.log(todo_contents);
 	}
