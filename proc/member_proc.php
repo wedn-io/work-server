@@ -33,6 +33,8 @@
             $query_tmp[status] = "NOT-FOUND";
             $query_tmp[msg] = "The input is invalid.";
         }
+    }elseif($mode == "join"){
+        
     }
 
     echo json_encode($query_tmp, true);
