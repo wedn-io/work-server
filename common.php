@@ -1,5 +1,6 @@
 <?
 	# /common.php 공통 코드 설정
+	session_start();
 
 	/* 경로설정 */
 
