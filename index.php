@@ -31,7 +31,7 @@
 	}
 
 	include $INCLUDE_HEAD;
-	include $CONFIG_PATH;
+	include $INCLUDE_CONFIG;
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;
 ?>
