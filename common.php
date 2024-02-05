@@ -78,10 +78,7 @@
 	}
 
 	function alert($msg, $url){
-		return "<script>
-					alert('$msg'); 
-					location.href='$url';
-				</script>";
+		return "<script>alert('$msg'); location.href='$url';</script>";
 	}
 
 	/* 개발용 아이피 설정 */
