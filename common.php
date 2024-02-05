@@ -110,4 +110,7 @@
 
 	// MySQLi 객체를 생성하여 데이터베이스에 연결
 	$mysqli = new mysqli($host, $username, $password, $dbname);
+	if ($mysqli->connect_error) {
+		die('데이터베이스 연결 오류: ' . $mysqli->connect_error);
+	}
 ?>
