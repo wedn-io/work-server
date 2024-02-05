@@ -127,4 +127,7 @@
 	# 테이블
 	$KH[WORK_BOARD] = "KH_WORK_BOARD";
 	$KH[TODO_LIST] = "KH_TODO_LIST";
+
+	# 시간
+	$time = time();
 ?>

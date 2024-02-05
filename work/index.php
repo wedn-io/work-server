@@ -1,9 +1,10 @@
 <?
 	# /work/index.php
-
+	$idx = $_GET[idx];
 	$query = " SELECT * FROM $KH[TODO_LIST] ";
 	$result = query($query);
 ?>
+<input type="hidden" name="idx" value="<?=$idx?>">
 
 <h2>TODOLIST</h2>
 <textarea name="todo-contents"></textarea>
@@ -11,7 +12,24 @@
 
 <script>
 	function todolist_registration(){
-		// todolist 내용
+		let idx = document.getElementsByName("idx")[0].value;
 		let todo_contents = document.getElementsByName("todo-contents")[0].value;
+
+		<? # AJAX 전송 시 POST 고정 ?>
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				"idx":idx,
+				"todo_contents":todo_contents
+			},
+			url: 'data.php',
+			success:function(res){
+				console.log(res.status);
+			},
+			error:function(){
+				console.log(res.status);
+			}
+		});
 	}
 </script>
