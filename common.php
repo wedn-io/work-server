@@ -113,15 +113,11 @@
 	// MySQLi 객체를 생성하여 데이터베이스에 연결
 	$conn = new mysqli($host, $username, $password, $dbname);
 
-	if ($mysqli->connect_error) {
-		die('데이터베이스 연결 오류: ' . $mysqli->connect_error);
-	}
-
 	/**********************************************************/
 
 	$query = " SELECT * FROM KH_WORK_BOARD ";
-	$result = mysqli_query($query, $conn);
-	while($row=mysqli_fetch_assoc($result)){
-		echo $row[WB_CONTENTS];
+	$result = mysqli_query($conn, $query);
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo $row['WB_CONTENTS'];
 	}
 ?>
