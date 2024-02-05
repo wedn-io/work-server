@@ -3,6 +3,7 @@
 			<?=DEV_PATH($INCLUDE_CONTENTS)?>
 			<?=DEV_INFO()?>
 			<?=DEV_PARAMETER($_POST, $_GET)?>
+			<?=DEV_SESSION()?>
 		</div>
 	<? } ?>
 </body>

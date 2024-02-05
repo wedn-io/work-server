@@ -64,6 +64,15 @@
 		return $RESPONSE_INFO;
 	}
 
+	function DEV_SESSION(){
+		$RESPONSE_SESSION = "";
+
+		$RESPONSE_SESSION .= "<br>=========================<br>";
+		$RESPONSE_SESSION .= print_r($_SESSION);
+		$RESPONSE_SESSION .= "=========================<br>";
+		return $RESPONSE_SESSION;
+	}
+
 	/* 개발용 아이피 설정 */
 	$ALLOW_IP = [
 		'211.184.136.132'
