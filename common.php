@@ -99,6 +99,7 @@
 	if(in_array($_SERVER['REMOTE_ADDR'], $ALLOW_IP)){
 		$_DEV = 1;
 	}
+	
 	/* */
 	$INCLUDE_CONFIG = "/config.php";
 

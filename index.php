@@ -32,6 +32,7 @@
 
 	include $INCLUDE_HEAD;
 	include $INCLUDE_CONFIG;
+	echo $INCLUDE_CONFIG."<>";
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;
 ?>
