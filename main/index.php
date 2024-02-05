@@ -1,3 +1,3 @@
 <?
-	echo "setting complete";
+	# /main/index.php
 ?>

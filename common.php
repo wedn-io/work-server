@@ -105,12 +105,11 @@
 
 	/**********************************************************/
 	
-	$host = '3.34.190.224'; // 데이터베이스 호스트
-	$dbname = 'KH_SOLUTION'; // 데이터베이스 이름
-	$username = 'root'; // 데이터베이스 사용자 이름
-	$password = 'wedn060104!'; // 데이터베이스 비밀번호
+	$host = '3.34.190.224';
+	$dbname = 'KH_SOLUTION';
+	$username = 'root';
+	$password = 'wedn060104!';
 
-	// MySQLi 객체를 생성하여 데이터베이스에 연결
 	$conn = new mysqli($host, $username, $password, $dbname);
 
 	/**********************************************************/
