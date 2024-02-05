@@ -19,6 +19,11 @@
 			break;
 	}
 
+	# 비로그인 시 로그인 페이지로
+	if(!$member){
+		$INCLUDE_CONTENTS = INCLUDE_PATH($MEMBER_DIR, $LOGIN_PATH);
+	}
+
 	include $INCLUDE_HEAD;
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;

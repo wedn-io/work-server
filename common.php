@@ -86,12 +86,16 @@
 	$WORK_PATH = "/work.php";
 	$WORKLOG_PATH = "/work_log.php";
 
+	$LOGIN_PATH = "/login.php";
+
 	/* DIR PATH */
 	$DEFAULT_DIR = "dir";
 	$MAIN_DIR = "main";
 	$WORK_DIR = "work";
 	$WORKLOG_DIR = "work_log";
 	$BOARD_DIR = "board";
+
+	$MEMBER_DIR = "member";
 
 
 	/* 파라미터 확인 */
@@ -127,7 +131,14 @@
 	# 테이블
 	$KH[WORK_BOARD] = "KH_WORK_BOARD";
 	$KH[TODO_LIST] = "KH_TODO_LIST";
+	$KH[MEMBER] = "KH_MEMBER";
 
 	# 시간
 	$time = time();
+
+	# 회원정보
+	$member = array();
+	$query = " SELECT * FROM $KH[MEMBER] WHERE MEMBER_ID = '$_SESSION[S_MEMBER_ID]' ";
+	$result = query($query);
+	$member = mysqli_fetch_assoc($result);
 ?>
