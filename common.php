@@ -102,6 +102,8 @@
 	}else{
 		$LAYOUT_INCLUDE_DIR = "main";
 	}
+
+	/**********************************************************/
 	
 	$host = '3.34.190.224'; // 데이터베이스 호스트
 	$dbname = 'KH_SOLUTION'; // 데이터베이스 이름
@@ -109,8 +111,17 @@
 	$password = 'wedn060104!'; // 데이터베이스 비밀번호
 
 	// MySQLi 객체를 생성하여 데이터베이스에 연결
-	$mysqli = new mysqli($host, $username, $password, $dbname);
+	$conn = new mysqli($host, $username, $password, $dbname);
+
 	if ($mysqli->connect_error) {
 		die('데이터베이스 연결 오류: ' . $mysqli->connect_error);
+	}
+
+	/**********************************************************/
+
+	$query = " SELECT * FROM KH_WORK_BOARD ";
+	$result = mysqli_query($query, $conn);
+	while($row=mysqli_fetch_assoc($result)){
+		echo $row[WB_CONTENTS];
 	}
 ?>
