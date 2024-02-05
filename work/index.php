@@ -7,13 +7,13 @@
 <input type="hidden" name="idx" value="<?=$idx?>">
 
 <h2>TODOLIST</h2>
-<textarea name="todo-contents"></textarea>
+<textarea name="todo_contents"></textarea>
 <button type="button" onClick="todolist_registration()">Add</button>
 
 <script>
 	function todolist_registration(){
 		let idx = document.getElementsByName("idx")[0].value;
-		let todo_contents = document.getElementsByName("todo-contents")[0].value;
+		let todo_contents = document.getElementsByName("todo_contents")[0].value;
 
 		<? # AJAX 전송 시 POST 고정 ?>
 		$.ajax({

@@ -2,7 +2,7 @@
     include "./_common.php";
 
     $idx = $_POST[idx];
-    $todo_contents = $_POST[todo-contents];
+    $todo_contents = $_POST[todo_contents];
     $query_tmp = array();
 
     if($idx){
