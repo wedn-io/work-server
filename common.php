@@ -87,6 +87,7 @@
 	$WORKLOG_PATH = "/work_log.php";
 
 	$LOGIN_PATH = "/login.php";
+	$JOIN_PATH = "/join.php";
 
 	/* DIR PATH */
 	$DEFAULT_DIR = "dir";

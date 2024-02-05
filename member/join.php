@@ -1,18 +1,17 @@
 <?
-	# /member/login.php
+	# /member/join.php
 
     if($is_member){
 		alert("이미 로그인중 입니다.", $INDEX_PATH);
 	}
 ?>
-<h2>로그인</h2>
+<h2>가입</h2>
 <input type="text" name="member_id" id="member_id" value="">
 <input type="text" name="member_password" id="member_password" value="">
-<button type="button" onClick="login()">Add</button>
-<a href="<?=INCLUDE_PATH($MEMBER_DIR, $JOIN_PATH)?>">Join</a>
+<button type="button" onClick="join()">Join</button>
 
 <script>
-	function login(){
+	function join(){
 		let member_id = document.getElementsByName("member_id")[0].value;
 		let member_password = document.getElementsByName("member_password")[0].value;
 
@@ -21,7 +20,7 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				"mode":"login",
+				"mode":"join",
 				"member_id":member_id,
 				"member_password":member_password
 			},
