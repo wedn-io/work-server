@@ -65,11 +65,12 @@
 	}
 
 	function DEV_SESSION(){
-		$RESPONSE_SESSION = "<br>";
-
+		$RESPONSE_SESSION = "<br>=========================<br>";
 		foreach($_SESSION as $k => $v){
 			$RESPONSE_SESSION .= "[". $k . " >>> " . $v . "]<br>";
 		}
+
+		$RESPONSE_SESSION .= "=========================<br>";
 
 		return $RESPONSE_SESSION;
 	}
