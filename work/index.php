@@ -7,10 +7,10 @@
 
 <h2>TODOLIST</h2>
 <textarea name="todo-contents"></textarea>
-<button type="button">Add</button>
+<button type="button" onChange="todolist_registration()">Add</button>
 
 <script>
-	function Todolist_Add(){
+	function todolist_registration(){
 		let todo_contents = document.getElementsByName("todo-contents");
 		console.log(todo_contents);
 	}
