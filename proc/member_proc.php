@@ -9,7 +9,7 @@
     
     if($mode == "login" || $mode == "join"){
         # 회원 검색 쿼리
-        $query = " SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_DEL_TIME FROM $KH[TODO_LIST] 
+        $query = " SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_DEL_TIME FROM $KH[MEMBER] 
                     WHERE MEMBER_ID = '$member_id' ";
         $result = query($query);
         $row = mysqli_fetch_assoc($result);
@@ -54,7 +54,7 @@
             $member_password_hash = password_hash($member_password, PASSWORD_DEFAULT);
 
             # 회원가입
-            $query = " INSERT INTO $KH[TODO_LIST] SET 
+            $query = " INSERT INTO $KH[MEMBER] SET 
                         MEMBER_ID = '$member_id',
                         MEMBER_PASSWORD = '$member_password_hash',
                         MEMBER_REG_TIME = '$time' ";
