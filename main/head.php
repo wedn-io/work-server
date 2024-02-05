@@ -25,3 +25,8 @@
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">게시판</a></li>
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">출입기록</a></li>
 		</ul>
+
+		<?
+		$unixTime = time();
+		echo $unixTime;
+		?>

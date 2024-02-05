@@ -81,6 +81,7 @@
 	$INDEX_PATH = "/index.php";
 
 	/* CONTENTS PATH */
+	$WORK_PATH = "/work.php";
 	$WORKLOG_PATH = "/work_log.php";
 
 	/* DIR PATH */
