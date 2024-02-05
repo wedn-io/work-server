@@ -97,6 +97,8 @@
 	$BOARD_DIR = "board";
 
 	$MEMBER_DIR = "member";
+	$LOGIN_DIR = "login";
+	$JOIN_DIR = "join";
 
 
 	/* 파라미터 확인 */

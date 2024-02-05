@@ -9,7 +9,7 @@
 <input type="text" name="member_id" id="member_id" value="">
 <input type="text" name="member_password" id="member_password" value="">
 <button type="button" onClick="login()">Add</button>
-<a href="<?=INCLUDE_PATH($MEMBER_DIR, $JOIN_PATH)?>">Join</a>
+<a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $JOIN_DIR)?>">Join</a>
 
 <script>
 	function login(){
