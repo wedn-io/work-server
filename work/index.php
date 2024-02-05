@@ -11,8 +11,7 @@
 
 <script>
 	function todolist_registration(){
-		alert("@@");
+		// todolist 내용
 		let todo_contents = document.getElementsByName("todo-contents")[0].value;
-		console.log(todo_contents);
 	}
 </script>
