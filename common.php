@@ -110,15 +110,4 @@
 
 	// MySQLi 객체를 생성하여 데이터베이스에 연결
 	$mysqli = new mysqli($host, $username, $password, $dbname);
-
-	// 연결 상태 확인
-	if ($mysqli->connect_errno) {
-		echo "데이터베이스 연결 실패: " . $mysqli->connect_error;
-		exit();
-	} else {
-		echo "데이터베이스 연결 성공";
-	}
-
-	// 추가적인 설정 옵션 지정 (옵션)
-	$mysqli->set_charset("utf8mb4");
 ?>
