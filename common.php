@@ -67,6 +67,7 @@
 	function DEV_SESSION(){
 		$RESPONSE_SESSION = "[SESSION]";
 		$RESPONSE_SESSION .= "<br>";
+		
 		foreach($_SESSION as $k => $v){
 			$RESPONSE_SESSION .= "[". $k . " : " . $v . "]<br>";
 		}
