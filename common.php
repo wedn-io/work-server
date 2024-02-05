@@ -79,7 +79,7 @@
 
 	function alert($msg, $url){
 		return "<script>
-					alert($msg); 
+					alert('$msg'); 
 					location.href='$url';
 				</script>";
 	}
