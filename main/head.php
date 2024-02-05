@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="/inc/css/default.css" rel="stylesheet" type="text/css" />
+
+		<? # Jquery 항상 실행, 추후 소스 다운로드 ?>
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
 	</head>
 	<body>
 		<ul>
