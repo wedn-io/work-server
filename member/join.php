@@ -28,7 +28,7 @@
 			success:function(res){
                 alert(res.msg);
 
-                if(res.status == "OK") location.href="/index.html";	
+                if(res.status == "OK") location.href="/index.php";	
 			},
 			error:function(){
 				<? # TODO 에러 로그 저장 및 메시지 출력 ?>
