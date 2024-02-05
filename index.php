@@ -26,7 +26,7 @@
 	}
 
 	# 2024-02-05 비로그인 시 로그인 페이지로
-	if(!$member){
+	if(!$member && $DIR != $JOIN_DIR){
 		$INCLUDE_CONTENTS = INCLUDE_PATH($MEMBER_DIR, $LOGIN_PATH);
 	}
 
