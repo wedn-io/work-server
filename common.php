@@ -116,8 +116,16 @@
 	/**********************************************************/
 
 	$query = " SELECT * FROM KH_WORK_BOARD ";
-	$result = mysqli_query($conn, $query);
+	$result = query($query);
 	while ($row = mysqli_fetch_assoc($result)) {
 		echo $row['WB_CONTENTS'];
 	}
+
+	function query($query){
+		global $conn;
+		$result = mysqli_query($conn, $query);
+		return $result;
+	}
+
+	/**********************************************************/
 ?>
