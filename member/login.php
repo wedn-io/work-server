@@ -20,7 +20,7 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				"mode":"LOGIN",
+				"mode":"login",
 				"member_id":member_id,
 				"member_password":member_password
 			},
