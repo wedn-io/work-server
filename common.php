@@ -55,24 +55,32 @@
 
 	# 파라미터 출력
 	function DEV_PARAMETER_OUTPUT($PARAMETER){
-		$RESPONSE_INFO = "<br>";
+		if($PARAMETER){
+			$RESPONSE_INFO = "<br>";
 
-		foreach($PARAMETER as $k => $v){
-			$RESPONSE_INFO .= "[". $k . " : " . $v . "]<br>";
+			foreach($PARAMETER as $k => $v){
+				$RESPONSE_INFO .= "[". $k . " : " . $v . "]<br>";
+			}
+		}else{
+			$PARAMETER = "";
 		}
 
 		return $RESPONSE_INFO;
 	}
 
 	function DEV_SESSION(){
-		$RESPONSE_SESSION = "[SESSION]";
-		$RESPONSE_SESSION .= "<br>";
-		
-		foreach($_SESSION as $k => $v){
-			$RESPONSE_SESSION .= "[". $k . " : " . $v . "]<br>";
-		}
+		if($_SESSION){
+			$RESPONSE_SESSION = "[SESSION]";
+			$RESPONSE_SESSION .= "<br>";
+			
+			foreach($_SESSION as $k => $v){
+				$RESPONSE_SESSION .= "[". $k . " : " . $v . "]<br>";
+			}
 
-		$RESPONSE_SESSION .= "=========================<br>";
+			$RESPONSE_SESSION .= "=========================<br>";
+		}else{
+			$RESPONSE_SESSION = "";
+		}
 
 		return $RESPONSE_SESSION;
 	}
