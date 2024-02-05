@@ -1,4 +1,6 @@
 <?
+	# /common.php 공통 코드 설정
+
 	/* 경로설정 */
 
 	# 페이지 호출 함수 /index.php?dir=code
@@ -114,12 +116,6 @@
 
 	/**********************************************************/
 
-	$query = " SELECT * FROM KH_WORK_BOARD ";
-	$result = query($query);
-	while ($row = mysqli_fetch_assoc($result)) {
-		echo $row['WB_CONTENTS'];
-	}
-
 	function query($query){
 		global $conn;
 		$result = mysqli_query($conn, $query);
@@ -127,4 +123,8 @@
 	}
 
 	/**********************************************************/
+
+	# 테이블
+	$KH[WORK_BOARD] = "KH_WORK_BOARD";
+	$KH[TODO_LIST] = "KH_TODO_LIST";
 ?>
