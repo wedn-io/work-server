@@ -1,3 +1,8 @@
+<? 
+	if (!defined('_KH_')){
+		alert("개별 접근이 불가능한 페이지입니다.", "/index.php");
+	}  
+?>
 <!DOCYTYPE HTML>
 <html>
 	<head>

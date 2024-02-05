@@ -77,6 +77,13 @@
 		return $RESPONSE_SESSION;
 	}
 
+	function alert($msg, $url){
+		return "<script>
+					alert($msg); 
+					location.href='$url';
+				</script>";
+	}
+
 	/* 개발용 아이피 설정 */
 	$ALLOW_IP = [
 		'211.184.136.132'
@@ -88,6 +95,7 @@
 		$_DEV = 1;
 	}
 	/* */
+	$INCLUDE_CONFIG = "/config.php";
 
 
 	/* DEFAULT PATH */
