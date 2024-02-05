@@ -58,16 +58,16 @@
 		$RESPONSE_INFO = "<br>";
 
 		foreach($PARAMETER as $k => $v){
-			$RESPONSE_INFO .= "[". $k . " >>> " . $v . "]<br>";
+			$RESPONSE_INFO .= "[". $k . " : " . $v . "]<br>";
 		}
 
 		return $RESPONSE_INFO;
 	}
 
 	function DEV_SESSION(){
-		$RESPONSE_SESSION = "<br>=========================<br>";
+		$RESPONSE_SESSION = "[SESSION]";
 		foreach($_SESSION as $k => $v){
-			$RESPONSE_SESSION .= "[". $k . " >>> " . $v . "]<br>";
+			$RESPONSE_SESSION .= "[". $k . " : " . $v . "]<br>";
 		}
 
 		$RESPONSE_SESSION .= "=========================<br>";
