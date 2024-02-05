@@ -26,9 +26,9 @@
 			},
 			url: '/proc/member_proc.php',
 			success:function(res){
-				console.log(res);
-                console.log(res.status);
-                console.log(res.msg);
+                alert(res.msg);
+
+                if(res.status == "OK") location.href="/index.html";	
 			},
 			error:function(){
 				<? # TODO 에러 로그 저장 및 메시지 출력 ?>
