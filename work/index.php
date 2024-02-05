@@ -23,7 +23,7 @@
 				"idx":idx,
 				"todo_contents":todo_contents
 			},
-			url: 'data.php',
+			url: '/proc/todo_proc.php',
 			success:function(res){
 				console.log(res.status);
 			},
