@@ -7,12 +7,7 @@
 
 		<link href="/inc/css/default.css" rel="stylesheet" type="text/css" />
 	</head>
-
-	<? include "./_common.php"; ?>
 	<body>
-		
-		
-		
 		<ul>
 			<? # 업무 관련 ?>
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">업무</a></li>
@@ -25,8 +20,3 @@
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">게시판</a></li>
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">출입기록</a></li>
 		</ul>
-
-		<?
-		$unixTime = time();
-		echo $unixTime;
-		?>

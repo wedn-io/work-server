@@ -102,7 +102,7 @@
 	}else{
 		$LAYOUT_INCLUDE_DIR = "main";
 	}
-
+	
 	$host = '3.34.190.224'; // 데이터베이스 호스트
 	$dbname = 'KH_SOLUTION'; // 데이터베이스 이름
 	$username = 'root'; // 데이터베이스 사용자 이름
@@ -115,14 +115,10 @@
 	if ($mysqli->connect_errno) {
 		echo "데이터베이스 연결 실패: " . $mysqli->connect_error;
 		exit();
-	}else{
-
-		echo "성공";
+	} else {
+		echo "데이터베이스 연결 성공";
 	}
 
 	// 추가적인 설정 옵션 지정 (옵션)
 	$mysqli->set_charset("utf8mb4");
-
-	// 연결 성공 시 원하는 작업 수행
-	// ...
 ?>
