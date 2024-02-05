@@ -10,13 +10,5 @@
 	<body>
 		<ul>
 			<? # 업무 관련 ?>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">업무</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">업체관리</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">프로젝트관리</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">개발문의</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">오류문의</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORKLOG_DIR)?>">업무기록</a></li>
-
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">게시판</a></li>
-			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $BOARD_DIR)?>">출입기록</a></li>
+			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">업무관리</a></li>
 		</ul>
