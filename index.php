@@ -31,7 +31,7 @@
 	}
 
 	include $INCLUDE_HEAD;
-	include "/config.php";
+	include $_SERVER['DOCUMENT_ROOT']."/config.php";
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;
 ?>
