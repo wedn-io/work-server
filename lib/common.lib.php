@@ -97,9 +97,43 @@
 	function query($query){
 		global $conn;
 		$result = mysqli_query($conn, $query);
-		print_r($result);
 		return $result;
 	}
 
 	/**********************************************************/
+
+	# 페이징
+	function getPageData($tableName, $currentPage, $perPage) {
+		$countQuery = "SELECT COUNT(*) as total FROM $tableName";
+		$countResult = query($countQuery);
+		$countRow = mysqli_fetch_assoc($countResult);
+		//$totalRows = $countRow['total']; 게시물이 없어 임시 100으로 조정
+		$totalRows = 100;
+
+		$totalPages = ceil($totalRows / $perPage);
+
+		$s_limit = ($currentPage - 1) * $perPage;
+		$e_limit = $perPage;
+		$query = "SELECT * FROM $tableName ORDER BY IDX DESC LIMIT $s_limit, $e_limit";
+		$result = query($query);
+
+		return array(
+			'data' => $result,
+			'totalPages' => $totalPages
+		);
+	}
+
+	function getPageLinks($currentPage, $totalPages, $qstr) {
+		$links = '';
+
+		for ($i = 1; $i <= $totalPages; $i++) {
+			if ($i == $currentPage) {
+				$links .= "<strong>$i</strong> "; // 현재 페이지는 강조 표시
+			} else {
+				$links .= "<a href='/index.php?$qstr&page=$i'>$i</a> "; // 페이지 링크 생성
+			}
+		}
+
+		return $links;
+	}
 ?>

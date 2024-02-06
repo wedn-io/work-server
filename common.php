@@ -8,23 +8,21 @@
 
 	# 테이블 정보
 	$KH = array();
-	$KH[WORK_BOARD] = "KH_WORK_BOARD";
-	$KH[TODO_LIST] = "KH_TODO_LIST";
-	$KH[MEMBER] = "KH_MEMBER";
+	$KH['WORK_BOARD'] = "KH_WORK_BOARD";
+	$KH['TODO_LIST'] = "KH_TODO_LIST";
+	$KH['MEMBER'] = "KH_MEMBER";
 
 	# 경로 정보
-	$KH_PATH[ROOT_PATH] = $_SERVER['DOCUMENT_ROOT'];
+	$KH_PATH['ROOT_PATH'] = $_SERVER['DOCUMENT_ROOT'];
 
 	# DB 연결
 	/*
 		[TODO] DB보안 관련 체크 및 보완
 	*/
-	include $KH_PATH[ROOT_PATH]."/common/dbconn.php";
+	include $KH_PATH['ROOT_PATH']."/common/dbconn.php";
 
 	# 공통 함수
-	include $KH_PATH[ROOT_PATH]."/lib/common.lib.php";
-
-	echo query();
+	include $KH_PATH['ROOT_PATH']."/lib/common.lib.php";
 
 	# 개발자 모드 아이피 설정
 	$ALLOW_IP = [
@@ -43,6 +41,8 @@
 	$TAIL_PATH = "tail.php";
 	$RELATIVE_INDEX_PATH = "./index.php";
 	$INDEX_PATH = "/index.php";
+	$LIST_PATH = "/list.php";
+	$WRITE_PATH = "/write.php";
 
 	/* CONTENTS PATH */
 	$WORK_PATH = "/work.php";
@@ -62,6 +62,11 @@
 
 	/* 경로 파라미터 */
 	$DIR = $_GET['dir'];
+	$MODE = $_GET['mode'];
+	$PAGE = $_GET['page'];
+
+	/* 쿼리스트링 */
+	$KH_BOARD['PARAMETER'] = "dir=".$DIR."&mode=".$MODE."&page=".$PAGE;
 
 	/*
 		[TODO] 관리자 레이아웃, 서브 레이아웃 설정 및 추가
@@ -76,8 +81,6 @@
 
 	/**********************************************************/
 
-
-
 	# 시간 정보
 	$time = time();
 
@@ -87,12 +90,17 @@
 
 	$member = array();
 
-	if($_SESSION[S_MEMBER_ID]){
+	if($_SESSION['S_MEMBER_ID']){
 		$query = " SELECT * FROM $KH[MEMBER] WHERE MEMBER_ID = '$_SESSION[S_MEMBER_ID]' ";
 		$result = query($query);
 		$member = mysqli_fetch_assoc($result);
 
-		if($member[IDX]) $is_member = 1;
-		if($member[LEVEL] == 10) $is_admin = 1;
+		if($member['IDX']) $is_member = 1;
+		if($member['MEMBER_LEVEL'] == 10) $is_admin = 1;
 	}
+
+	# 게시판 초기 설정
+	$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+	$perPage = 10;
+
 ?>

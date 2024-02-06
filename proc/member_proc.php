@@ -8,22 +8,18 @@
     include "./_common.php";
 
     $mode = $_POST[mode];
-    $member_id = $_POST[member_id];
+    $member_id = strip_tags($_POST[member_id]);
     $member_password = $_POST[member_password];
     $query_tmp = array();
 
 
     if($mode == "login" || $mode == "join"){
         /* 회원 검색 */
-        $query = " SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_DEL_TIME FROM $KH[MEMBER]
+        $query = " SELECT IDX, MEMBER_ID, MEMBER_PASSWORD, MEMBER_DEL_TIME FROM $KH[MEMBER]
                     WHERE MEMBER_ID = '$member_id' ";
         $result = query($query);
         $row = mysqli_fetch_assoc($result);
     }
-
-	echo $mode."<br>";
-	echo $query."<br>";
-	echo $row[IDX];
 
     if($mode == "login"){
         if($row[IDX]){

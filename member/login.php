@@ -7,7 +7,7 @@
 ?>
 <h2>로그인</h2>
 <input type="text" name="member_id" id="member_id" value="">
-<input type="text" name="member_password" id="member_password" value="">
+<input type="password" name="member_password" id="member_password" value="">
 <button type="button" onClick="login()">Add</button>
 <a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $JOIN_DIR)?>">Join</a>
 
@@ -29,7 +29,7 @@
 			success:function(res){
                 alert(res.msg);
 
-                if(res.status == "OK") location.href="/index.php";	
+                if(res.status == "OK") location.href="/index.php";
 			},
 			error:function(){
 				<? # TODO 에러 로그 저장 및 메시지 출력 ?>

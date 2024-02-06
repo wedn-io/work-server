@@ -1,12 +1,16 @@
 <?
-	# /work/index.php
-	$idx = $_GET[idx];
-	$query = " SELECT * FROM $KH[TODO_LIST] ";
+	/*
+		업무 관련 게시판, 미확정
+		Last update 2024-02-06 IKH
+	*/
+
+	if($_GET['idx']) $idx = $_GET['idx'];
+	$query = " SELECT * FROM $KH[WORK_BOARD] ";
 	$result = query($query);
 ?>
 <input type="hidden" name="idx" value="<?=$idx?>">
 
-<h2>TODOLIST</h2>
+<h2>업무</h2>
 <textarea name="todo_contents"></textarea>
 <button type="button" onClick="todolist_registration()">Add</button>
 

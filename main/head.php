@@ -15,4 +15,5 @@
 		<ul>
 			<? # 업무 관련 ?>
 			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>">업무관리</a></li>
+			<li><a href="<?=LOCATION_PATH($INDEX_PATH, $DEFAULT_DIR, $WORK_DIR)?>&mode=list">하위-업무게시판</a></li>
 		</ul>
