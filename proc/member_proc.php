@@ -26,7 +26,7 @@
             $ori_password = $row[MEMBER_PASSWORD];
 
             /* 패스워드를 검사한다. */
-            if(password_verify($member_password, $ori_password) && $row[MEMBER_DEL_TIME]){
+            if(password_verify($member_password, $ori_password) && !$row[MEMBER_DEL_TIME]){
                 /* 패스워드 일치시 통과 */
                 $_SESSION[S_MEMBER_ID] = $row[MEMBER_ID];
                 $query_tmp[status] = "OK";
