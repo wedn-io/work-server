@@ -21,6 +21,10 @@
         $row = mysqli_fetch_assoc($result);
     }
 
+	echo $mode."<br>";
+	echo $query."<br>";
+	echo $row[IDX];
+
     if($mode == "login"){
         if($row[IDX]){
             $ori_password = $row[MEMBER_PASSWORD];
@@ -34,12 +38,12 @@
             }else{
                 /* [보안] 아이디, 패스워드 틀리는 문구 통일 */
                 $query_tmp[status] = "NOT-FOUND";
-                $query_tmp[msg] = "The input is invalid.1";
+                $query_tmp[msg] = "The input is invalid.";
             }
         }else{
             /* [보안] 아이디, 패스워드 틀리는 문구 통일 */
             $query_tmp[status] = "NOT-FOUND";
-            $query_tmp[msg] = "The input is invalid.2".$query;
+            $query_tmp[msg] = "The input is invalid.";
         }
     }elseif($mode == "join"){
         if($row[IDX]){

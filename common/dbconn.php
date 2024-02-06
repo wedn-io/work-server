@@ -14,6 +14,5 @@
 
 	if ($mysqli->connect_errno) {
 		echo "connect error : " . $mysqli->connect_error;
-		exit();
 	}
 ?>
