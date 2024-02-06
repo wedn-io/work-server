@@ -1,4 +1,4 @@
-<?php
+<?
 	include "./common.php";
 
 	$INCLUDE_HEAD = LAYOUT_PATH($LAYOUT_INCLUDE_DIR, $HEAD_PATH);
@@ -32,7 +32,6 @@
 
 	include $INCLUDE_HEAD;
 	include $INCLUDE_CONFIG;
-	echo $INCLUDE_CONFIG."<>";
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;
 ?>
