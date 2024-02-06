@@ -39,7 +39,7 @@
         }else{
             /* [보안] 아이디, 패스워드 틀리는 문구 통일 */
             $query_tmp[status] = "NOT-FOUND";
-            $query_tmp[msg] = "The input is invalid.2";
+            $query_tmp[msg] = "The input is invalid.2".$query;
         }
     }elseif($mode == "join"){
         if($row[IDX]){
