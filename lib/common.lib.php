@@ -97,6 +97,7 @@
 	function query($query){
 		global $conn;
 		$result = mysqli_query($conn, $query);
+		print_r($result);
 		return $result;
 	}
 

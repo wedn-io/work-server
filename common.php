@@ -24,6 +24,8 @@
 	# 공통 함수
 	include $KH_PATH[ROOT_PATH]."/lib/common.lib.php";
 
+	echo query();
+
 	# 개발자 모드 아이피 설정
 	$ALLOW_IP = [
 		'211.184.136.132'
@@ -84,10 +86,13 @@
 	$is_admin = 0;
 
 	$member = array();
-	$query = " SELECT * FROM $KH[MEMBER] WHERE MEMBER_ID = '$_SESSION[S_MEMBER_ID]' ";
-	$result = query($query);
-	$member = mysqli_fetch_assoc($result);
 
-	if($member[IDX]) $is_member = 1;
-	if($member[LEVEL] == 10) $is_admin = 1;
+	if($_SESSION[S_MEMBER_ID]){
+		$query = " SELECT * FROM $KH[MEMBER] WHERE MEMBER_ID = '$_SESSION[S_MEMBER_ID]' ";
+		$result = query($query);
+		$member = mysqli_fetch_assoc($result);
+
+		if($member[IDX]) $is_member = 1;
+		if($member[LEVEL] == 10) $is_admin = 1;
+	}
 ?>
