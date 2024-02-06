@@ -15,14 +15,14 @@
 	# 경로 정보
 	$KH_PATH[ROOT_PATH] = $_SERVER['DOCUMENT_ROOT'];
 
-	# 공통 함수
-	include $KH_PATH[ROOT_PATH]."/lib/common.lib.php";
-
+	# DB 연결
 	/*
 		[TODO] DB보안 관련 체크 및 보완
 	*/
-	# DB 연결
 	include $KH_PATH[ROOT_PATH]."/common/dbconn.php";
+
+	# 공통 함수
+	include $KH_PATH[ROOT_PATH]."/lib/common.lib.php";
 
 	# 개발자 모드 아이피 설정
 	$ALLOW_IP = [
