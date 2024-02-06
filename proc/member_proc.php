@@ -1,10 +1,11 @@
 <?
-    include "./_common.php";
-
 	/*
+		[TODO] 로그인 관련 보안 체크 및 보완
 		회원 프로세스 페이지
-		마지막 수정일 2024-02-06 IKH
+		Last update 2024-02-06 IKH
 	*/
+
+    include "./_common.php";
 
     $mode = $_POST[mode];
     $member_id = $_POST[member_id];

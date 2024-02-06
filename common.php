@@ -1,7 +1,7 @@
 <?
 	/*
-		공통 코드 설정 /common.php
-		마지막 수정일 2024-02-06 IKH
+		공통 코드 설정
+		Last update 2024-02-06 IKH
 	*/
 
 	session_start();
