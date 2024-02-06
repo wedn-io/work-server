@@ -18,6 +18,12 @@
 	# 공통 함수
 	include $KH_PATH[ROOT_PATH]."/lib/common.lib.php";
 
+	/*
+		[TODO] DB보안 관련 체크 및 보완
+	*/
+	# DB 연결
+	include $KH_PATH[ROOT_PATH]."/common/dbconn.php";
+
 	# 개발자 모드 아이피 설정
 	$ALLOW_IP = [
 		'211.184.136.132'
@@ -68,10 +74,7 @@
 
 	/**********************************************************/
 
-	/*
-		[TODO] DB보안 관련 체크 및 보완
-	*/
-	include $KH_PATH[ROOT_PATH]."/common/dbconn.php";
+
 
 	# 시간 정보
 	$time = time();
