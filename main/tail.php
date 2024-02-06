@@ -4,6 +4,10 @@
 			<?=DEV_INFO()?>
 			<?=DEV_PARAMETER($_POST, $_GET)?>
 			<?=DEV_SESSION()?>
+			<?
+				error_reporting( E_ALL );
+				ini_set( "display_errors", 1 );
+			?>
 		</div>
 	<? } ?>
 </body>
