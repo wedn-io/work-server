@@ -11,4 +11,9 @@
 	$password = 'wedn060104!';
 
 	$conn = new mysqli($host, $username, $password, $dbname);
+
+	if ($mysqli->connect_errno) {
+		echo "connect error : " . $mysqli->connect_error;
+		exit();
+	}
 ?>
