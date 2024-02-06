@@ -31,7 +31,7 @@
 	}
 
 	include $INCLUDE_HEAD;
-	include $INCLUDE_CONFIG;
+	include "/config.php";
 	include $INCLUDE_CONTENTS;
 	include $INCLUDE_TAIL;
 ?>

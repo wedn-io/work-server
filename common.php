@@ -99,7 +99,7 @@
 	if(in_array($_SERVER['REMOTE_ADDR'], $ALLOW_IP)){
 		$_DEV = 1;
 	}
-	
+
 	/* */
 	$INCLUDE_CONFIG = "/config.php";
 
@@ -160,6 +160,7 @@
 	/**********************************************************/
 
 	# 테이블
+	$KH = array();
 	$KH[WORK_BOARD] = "KH_WORK_BOARD";
 	$KH[TODO_LIST] = "KH_TODO_LIST";
 	$KH[MEMBER] = "KH_MEMBER";
@@ -172,4 +173,6 @@
 	$query = " SELECT * FROM $KH[MEMBER] WHERE MEMBER_ID = '$_SESSION[S_MEMBER_ID]' ";
 	$result = query($query);
 	$member = mysqli_fetch_assoc($result);
+
+	if($member[IDX]) $is_member = 1;
 ?>
